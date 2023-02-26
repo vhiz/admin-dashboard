@@ -1,0 +1,90 @@
+@import "../../app.scss";
+
+.sidebar {
+  @include themify($themes) {
+    flex: 1;
+    border-right: 0.5px solid themed("border");
+    min-height: 100vh;
+    background-color: themed("bgSoft");
+
+    .top {
+      height: 50px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+
+      span {
+        font-size: 20px;
+        font-weight: bold;
+        color: themed("logo");
+      }
+    }
+
+    hr {
+      height: 0;
+      border: 0.5px solid themed("border");
+    }
+
+    .center {
+      padding-left: 10px;
+      ul {
+        list-style: none;
+        padding: 0;
+        margin: 0;
+
+        p {
+          font-size: 10px;
+          font-weight: bold;
+          color: themed("textColorSoft");
+          margin-top: 15px;
+          margin-bottom: 5px;
+        }
+        li {
+          display: flex;
+          align-items: center;
+          padding: 5px;
+          cursor: pointer;
+          transition: ease 1s;
+
+          &:hover {
+            background-color: themed("border");
+          }
+
+          .icon {
+            height: 25px;
+            width: 25px;
+          }
+
+          span {
+            font-size: 13px;
+            font-weight: 600;
+            color: themed("textColorSoft");
+            margin-left: 10px;
+          }
+        }
+      }
+    }
+
+    .bottom {
+      display: flex;
+      align-items: center;
+      margin: 10px;
+      .colorOption {
+        width: 20px;
+        height: 20px;
+        border-radius: 5px;
+        cursor: pointer;
+        border: 1px solid themed("border");
+        margin: 5px;
+
+        &:nth-child(1) {
+          background-color: whitesmoke;
+        }
+
+        &:nth-child(2) {
+          background-color: rgb(36, 33, 33);
+        }
+      }
+    }
+  }
+}

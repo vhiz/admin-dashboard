@@ -1,0 +1,36 @@
+@import "../../app.scss";
+.table {
+  @include themify($themes) {
+    background-color: themed("bgSoft");
+    .tableCell {
+      color: themed('textColorSoft');
+      .cellWrapper {
+        display: flex;
+        align-items: center;
+        gap: 10px;
+
+        img {
+          height: 32px;
+          width: 32px;
+          border-radius: 50%;
+          object-fit: cover;
+        }
+      }
+
+      .status {
+        padding: 5px;
+        border-radius: 5px;
+
+        &.Approved {
+          color: green;
+          background-color: rgba(0, 128, 0, 0.151);
+        }
+
+        &.Pending {
+          color: goldenrod;
+          background-color: rgba(218, 165, 32, 0.151);
+        }
+      }
+    }
+  }
+}

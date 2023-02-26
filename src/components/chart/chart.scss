@@ -1,0 +1,23 @@
+@import "../../app.scss";
+.chart {
+  @include themify($themes) {
+    flex: 4;
+    -webkit-box-shadow: 5px 5px 15px 5px rgba(0, 0, 0, 0.16);
+    box-shadow: 5px 5px 15px 5px rgba(0, 0, 0, 0.16);
+    border-radius: 5px;
+    padding: 10px;
+    background-color: themed("bgSoft");
+    color: themed("textColorSoft");
+
+    .title {
+      margin-bottom: 20px;
+    }
+
+    .xaxis {
+      stroke: themed("textColorSoft");
+    }
+    .chartGrid {
+      stroke: themed("border");
+    }
+  }
+}

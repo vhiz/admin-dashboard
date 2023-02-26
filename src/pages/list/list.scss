@@ -1,0 +1,11 @@
+@import "../../app.scss";
+.list {
+  @include themify($themes) {
+    display: flex;
+    width: 100%;
+    .listContanier {
+      flex: 6;
+      background-color: themed('bg');
+    }
+  }
+}

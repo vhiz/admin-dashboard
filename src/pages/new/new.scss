@@ -1,0 +1,92 @@
+@import "../../app.scss";
+.new {
+  @include themify($themes) {
+    display: flex;
+    .newContainer {
+      flex: 6;
+      background-color: themed("bg");
+
+      .top {
+        -webkit-box-shadow: 5px 5px 15px 5px rgba(0, 0, 0, 0.16);
+        box-shadow: 5px 5px 15px 5px rgba(0, 0, 0, 0.16);
+        padding: 10px;
+        margin: 20px;
+        border-radius: 5px;
+        display: flex;
+        background-color: themed("bgSoft");
+
+        h1 {
+          color: themed("textColorSoft");
+          font-size: 20px;
+        }
+      }
+
+      .bottom {
+        -webkit-box-shadow: 5px 5px 15px 5px rgba(0, 0, 0, 0.16);
+        box-shadow: 5px 5px 15px 5px rgba(0, 0, 0, 0.16);
+        padding: 20px;
+        margin: 20px;
+        border-radius: 5px;
+        display: flex;
+        background-color: themed("bgSoft");
+
+        .left {
+          flex: 1;
+          text-align: center;
+          img {
+            width: 100px;
+            height: 100px;
+            border-radius: 50%;
+            object-fit: cover;
+          }
+        }
+
+        .right {
+          flex: 2;
+          form {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 30px;
+            justify-content: space-around;
+
+            .formInput {
+              width: 40%;
+
+              label {
+                display: flex;
+                align-items: center;
+                gap: 10px;
+
+                .icon {
+                  cursor: pointer;
+                }
+              }
+
+              input {
+                width: 100%;
+                outline: none;
+                padding: 5px;
+                border: none;
+                border-bottom: 1px solid themed("border");
+                background-color: transparent;
+                color: themed('textColor');
+              }
+            }
+
+            button {
+              width: 150px;
+              padding: 10px;
+              margin-top: 10px;
+              border: none;
+              cursor: pointer;
+              border-radius: 5px;
+              color: themed("bgSoft");
+              font-weight: bold;
+              background-color: themed("logo");
+            }
+          }
+        }
+      }
+    }
+  }
+}

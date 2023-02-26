@@ -1,0 +1,70 @@
+@import "../../app.scss";
+
+.widget {
+  @include themify($themes) {
+    display: flex;
+    flex: 1;
+    justify-content: space-between;
+    padding: 10px;
+    -webkit-box-shadow: 5px 5px 15px 5px rgba(0, 0, 0, 0.16);
+    box-shadow: 5px 5px 15px 5px rgba(0, 0, 0, 0.16);
+    border-radius: 10px;
+    height: 100px;
+    background-color: themed('bgSoft');
+
+    .left {
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+
+      .title {
+        font-weight: bold;
+        font-size: 14px;
+        color: themed('textColorSoft');
+      }
+
+      .counter {
+        font-size: 28px;
+        font-weight: 300;
+        color: themed('textColor');
+      }
+
+      .link {
+        width: max-content;
+        font-size: 12px;
+        border-bottom: 1px solid themed('textColorSoft');
+        color: themed('textColor');
+      }
+    }
+
+    .right {
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+
+      .percentage {
+        display: flex;
+        align-items: center;
+        font-size: 14px;
+
+        &.positive {
+          color: themed('precentPositive');
+        }
+
+        &.negative {
+          color: themed('percentNegative');
+        }
+        img {
+          height: 18px;
+          width: 18px;
+        }
+      }
+
+      img {
+        height: 35px;
+        width: 35px;
+        align-self: flex-end;
+      }
+    }
+  }
+}

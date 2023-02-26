@@ -1,0 +1,89 @@
+@import "../../app.scss";
+.datatable {
+  @include themify($themes) {
+    height: 600px;
+    padding: 20px;
+
+    .datagrid {
+      color: themed("textColor");
+      background-color: themed("bgSoft");
+      border: 1px solid themed("border");
+    }
+    .dataTitle {
+      width: 100%;
+      font-size: 24px;
+      color: themed("textColorSoft");
+      margin-bottom: 10px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+
+      .link {
+        text-decoration: none;
+        color: themed("precentPositive");
+        font-size: 16px;
+        font-weight: 400;
+        border: 1px solid themed("precentPositive");
+        padding: 5px;
+        border-radius: 5px;
+        cursor: pointer;
+      }
+    }
+    .cellWithImg {
+      display: flex;
+      align-items: center;
+
+      .cellImg {
+        width: 32px;
+        height: 32px;
+        border-radius: 50%;
+        object-fit: cover;
+        margin-right: 20px;
+      }
+    }
+
+    .cellWithStatus {
+      padding: 5px;
+      border-radius: 5px;
+
+      &.active {
+        color: themed("precentPositive");
+        background-color: rgba(0, 128, 0, 0.151);
+      }
+
+      &.passive {
+        color: themed("percentNegative");
+        background-color: rgba(220, 20, 60, 0.151);
+      }
+
+      &.pending {
+        color: themed("percentNeutral");
+        background-color: rgba(218, 165, 32, 0.151);
+      }
+    }
+
+    .cellAction {
+      display: flex;
+      align-items: center;
+      gap: 15px;
+
+      .view {
+        padding: 2px 5px;
+        border: 1px dotted themed("precentPositive");
+        border-radius: 5px;
+        outline: none;
+        color: themed("precentPositive");
+        cursor: pointer;
+      }
+
+      .delete {
+        padding: 2px 5px;
+        border: 1px dotted themed("percentNegative");
+        border-radius: 5px;
+        outline: none;
+        color: themed("percentNegative");
+        cursor: pointer;
+      }
+    }
+  }
+}

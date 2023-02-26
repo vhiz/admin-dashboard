@@ -1,0 +1,84 @@
+@import "../../app.scss";
+.featured {
+  @include themify($themes) {
+    flex: 2;
+    -webkit-box-shadow: 5px 5px 15px 5px rgba(0, 0, 0, 0.16);
+    box-shadow: 5px 5px 15px 5px rgba(0, 0, 0, 0.16);
+    border-radius: 5px;
+    padding: 10px;
+    background-color: themed("bgSoft");
+
+    .top {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      color: themed("textColorSoft");
+
+      h1 {
+        font-size: 16px;
+        font-weight: 500;
+      }
+    }
+
+    .bottom {
+      padding: 20px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      gap: 15px;
+
+      .featuredChart {
+        width: 100px;
+        height: 100px;
+      }
+
+      .title {
+        font-weight: 500;
+        color: themed("textColorSoft");
+      }
+
+      .amount {
+        font-size: 30px;
+      }
+
+      .desc {
+        font-weight: 300;
+        font-size: 12px;
+        color: themed("textColorSoft");
+        text-align: center;
+      }
+
+      .summary {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        width: 100%;
+
+        .item {
+          text-align: center;
+
+          .itemTitle {
+            font-size: 14px;
+            color: themed("textColorSoft");
+          }
+
+          .itemResult {
+            display: flex;
+            align-items: center;
+            margin-top: 10px;
+            font-size: 16px;
+
+            &.positive {
+              color: themed("precentPositive");
+            }
+
+            &.negative {
+              color: themed("percentNegative");
+            }
+          }
+        }
+      }
+    }
+  }
+}
